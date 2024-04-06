@@ -1,0 +1,17 @@
+[
+{"Action": "iam:PutRolePolicy","Resource": "arn:aws:s3::012345678912:role/myexamplerole@domain.com"},
+{"Action": "iam:PutRolePolicy","Resource": "arn:aws:s3::213413212321:role/u129383274"},
+{"Action": "iam:PutRolePolicy","Resource": "arn:aws:s3::414151343223:role/username1"},
+{"Action": "iam:UpdateAssumeRolePolicy","Resource": "arn:aws:s3::012345678912:role/myexamplerole@domain.com"},
+{"Action": "iam:UpdateAssumeRolePolicy","Resource": "arn:aws:s3::213413212321:role/u129383274"},
+{"Action": "iam:UpdateAssumeRolePolicy","Resource": "arn:aws:s3::414151343223:role/username1"},
+{"Action": "iam:AttachRolePolicy","Resource": "arn:aws:s3::012345678912:role/myexamplerole@domain.com"},
+{"Action": "iam:AttachRolePolicy","Resource": "arn:aws:s3::213413212321:role/u129383274"},
+{"Action": "iam:AttachRolePolicy","Resource": "arn:aws:s3::414151343223:role/username1"},
+{"Action": "iam:DeleteRolePolicy","Resource": "arn:aws:s3::012345678912:role/myexamplerole@domain.com"},
+{"Action": "iam:DeleteRolePolicy","Resource": "arn:aws:s3::213413212321:role/u129383274"},
+{"Action": "iam:DeleteRolePolicy","Resource": "arn:aws:s3::414151343223:role/username1"},
+{"Action": "iam:DetachRolePolicy","Resource": "arn:aws:s3::012345678912:role/myexamplerole@domain.com"},
+{"Action": "iam:DetachRolePolicy","Resource": "arn:aws:s3::213413212321:role/u129383274"},
+{"Action": "iam:DetachRolePolicy","Resource": "arn:aws:s3::414151343223:role/username1"}
+]

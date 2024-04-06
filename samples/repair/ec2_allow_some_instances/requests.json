@@ -1,0 +1,38 @@
+[
+    {
+        "Action": "ec2:DescribeInstanceStatus",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef2"
+    },
+    {
+        "Action": "ec2:DescribeInstanceAttribute",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef1"
+    },
+    {
+        "Action": "ec2:DescribeInstanceAttribute",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef3"
+    },
+    {
+        "Action": "ec2:RunInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef1"
+    },
+    {
+        "Action": "ec2:StartInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef1"
+    },
+    {
+        "Action": "ec2:StopInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef1"
+    },
+    {
+        "Action": "ec2:RunInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef2"
+    },
+    {
+        "Action": "ec2:StartInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef2"
+    },
+    {
+        "Action": "ec2:StopInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-1234567890abcdef2"
+    }
+]

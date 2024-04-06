@@ -1,0 +1,21 @@
+[
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-a/info"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-a/lib"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-b/etc"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-b/tmp"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-c/log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-d/mailbox"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-e/schedule"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-x/doctrine"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-a0/foods"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::projectx12345/584-zzz/conclusion"},
+
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-1234567890abcdef1"},
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-0123456789abcdefg"},
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-abcdefg0123456789"},
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-9876543210abcdefg"},
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-0a1b2c3d4e5e6f7g1"},
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-543210abcdefg9876"},
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-012345gfedcba6789"},
+{"Action": "ec2:StartInstances","Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-000000aaaaaaa1111"}
+]

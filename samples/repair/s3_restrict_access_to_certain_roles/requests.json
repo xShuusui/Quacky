@@ -1,0 +1,29 @@
+[
+    {
+        "Action": "s3:CreateBucket",
+        "Resource": "arn:aws:s3:::billing"
+    },
+    {
+        "Action": "s3:DeleteBucket",
+        "Resource": "arn:aws:s3:::billing"
+    },
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/stewart@domain.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/files.global@domain.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/admin@games4u.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/awesome_user@xyz.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/gandalf@lotr.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/voldemort@pottersux.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/chocolate@candy.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/my.email@anonymous.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::billing/mail/twelve@numbers.com"},
+
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/stewart@domain.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/files.global@domain.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/admin@games4u.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/awesome_user@xyz.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/gandalf@lotr.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/voldemort@pottersux.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/chocolate@candy.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/my.email@anonymous.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::billing/mail/twelve@numbers.com"}
+]

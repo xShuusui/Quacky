@@ -1,0 +1,12 @@
+[
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-012314567898"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-122345678999"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-212235676999"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-312363789399"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-412474289799"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-501351678793"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-602356478999"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-723435678989"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-801345674399"},
+{"Action": "ec2:RunInstances", "Resource": "arn:aws:ec2:us-east-1:123412341243:instance/i-912345678699"}
+]

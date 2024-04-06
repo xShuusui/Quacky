@@ -23,6 +23,7 @@ static_declarations = {
 
 declarations = set() # Maintain a set of declarations
 assertions = set() # Maintain a set of one-time assertions
+assertions_smt_lib = set() # hack for policy repair
 namespaces = set() # Maintain a set of namespaces across all statements (for AWS)
 actions = set() # Maintain a set of actions across all statements (for Azure)
 
@@ -292,8 +293,18 @@ class Statement:
             global declarations
             declarations.update(d)
 
+            # hacked for policy repair
             global assertions
-            assertions.update(a)
+            global assertions_smt_lib
+
+            for assertion in a:
+                if 'str.to.re' in assertion:
+                    assertions_smt_lib.add(assertion)
+                elif '/' in assertion:
+                    assertions.add(assertion)
+                else:
+                    assertions.add(assertion)
+                    assertions_smt_lib.add(assertion)
 
             body += b
 

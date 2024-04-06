@@ -1,0 +1,29 @@
+[
+    {
+        "Action": "s3:CreateBucket",
+        "Resource": "arn:aws:s3:::madeupbucketname"
+    },
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/ABOUT"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/ez-crypto/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/ez-crypto/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/0-day-finder/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/0-day-finder/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/alphabetizer/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/alphabetizer/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/palindrome-verifier/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::madeupbucketname/projects/palindrome-verifier/INSTALL"},
+
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/ABOUT"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/README"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/INSTALL"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/ez-crypto/README"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/ez-crypto/INSTALL"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/0-day-finder/README"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/0-day-finder/INSTALL"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/alphabetizer/README"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/alphabetizer/INSTALL"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/palindrome-verifier/README"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::madeupbucketname/projects/palindrome-verifier/INSTALL"}
+]

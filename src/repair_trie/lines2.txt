@@ -1,0 +1,4 @@
+arn:aws:iam::foo:user/*foo@domain.com
+arn:aws:iam::foo:user/*foo@domain.com
+arn:aws:iam::bar:user/*bar@domain.com
+arn:aws:iam::bar:user/*bar@domain.com`

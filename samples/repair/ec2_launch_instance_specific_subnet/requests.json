@@ -1,0 +1,34 @@
+[
+    {
+        "Action": "ec2:DescribeInstances",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-f012333405555599f"
+    },
+    {
+        "Action": "ec2:DescribeInstanceStatus",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-1234567890abcdef1"
+    },
+    {
+        "Action": "ec2:DescribeInstanceAttribute",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-f012333405555599f"
+    },
+    {
+        "Action": "ec2:DescribeInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-f012333405555599f"
+    },
+    {
+        "Action": "ec2:DescribeInstanceStatus",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-1234567890abcdef1"
+    },
+    {
+        "Action": "ec2:DescribeInstanceAttribute",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-f012333405555599f"
+    },
+    {
+        "Action": "ec2:RunInstances",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-1234567890abcdef1"
+    },
+    {
+        "Action": "ec2:RunInstances",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-0987654321fedcba0"
+    }
+]

@@ -1,0 +1,12 @@
+[
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/alpha/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/bravo/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/charlie/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/delta/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/echo/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/foxtrot/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/golf/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/hotal/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/india/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/teams/juliet/clients/summary.txt"}
+]

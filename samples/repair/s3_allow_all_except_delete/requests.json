@@ -1,0 +1,34 @@
+[
+    {
+        "Action": "s3:GetBucketLocation",
+        "Resource": "arn:aws:s3:::mybucket"
+    },
+    {
+        "Action": "s3:GetBucketPublicAccessBlock",
+        "Resource": "arn:aws:s3:::mybucket"
+    },
+    {
+        "Action": "s3:GetBucketAcl",
+        "Resource": "arn:aws:s3:::mybucket"
+    },
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/ABOUT"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/ez-crypto/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/ez-crypto/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/0-day-finder/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/0-day-finder/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/alphabetizer/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/alphabetizer/INSTALL"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/palindrome-verifier/README"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/projects/palindrome-verifier/INSTALL"},
+
+    {
+        "Action": "s3:GetAccountPublicAccessBlock",
+        "Resource": "arn:aws:s3:::mybucket"
+    },
+    {
+        "Action": "s3:PutAccountPublicAccessBlock",
+        "Resource": "arn:aws:s3:::mybucket"
+    }
+]

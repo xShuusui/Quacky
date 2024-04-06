@@ -1,0 +1,30 @@
+[
+    {
+        "Action": "ec2:AttachVolume",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-1234567890*"
+    },
+    {
+        "Action": "ec2:DetachVolume",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:instance/i-1234567890*"
+    },
+    {
+        "Action": "ec2:AttachVolume",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-0987654321*"
+    },
+    {
+        "Action": "ec2:DetachVolume",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/i-0987654321*"
+    },
+    {
+        "Action": "ec2:AttachVolume",
+        "Resource": "arn:aws:ec2:us-west-2:123456123456:volume/vol-1234567890*"
+    },    
+    {
+        "Action": "ec2:AttachVolume",
+        "Resource": "arn:aws:ec2:us-west-2:654321654321:instance/vol-0987654321*"
+    },
+
+{"Action": "ec2:AttachVolume", "Resource": "arn:aws:ec2:us-east-2:121212121212:volume/vol-543210abcdeff9876"},
+{"Action": "ec2:AttachVolume", "Resource": "arn:aws:ec2:us-east-1:999999999999:volume/vol-543210abcdeff9876"},
+{"Action": "ec2:AttachVolume", "Resource": "arn:aws:ec2:us-east-2:999999999999:volume/vol-34123938aaaaaaaaa"}
+]

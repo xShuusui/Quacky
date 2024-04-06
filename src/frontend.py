@@ -36,15 +36,15 @@ def validate_args(args):
         return azure2policy(role_definitions, role_assignment1, role_assignment2)
 
     # GCP
-    elif args.roles and args.role_binding1:
+    elif args.roles and args.role_bindings1:
         roles = json.loads(open(args.roles, 'r').read())
-        role_binding1 = json.loads(open(args.role_binding1, 'r').read())
-        role_binding2 = None
+        role_bindings1 = json.loads(open(args.role_bindings1, 'r').read())
+        role_bindings2 = None
 
-        if args.role_binding2:
-            role_binding2 = json.loads(open(args.role_binding2, 'r').read())
+        if args.role_bindings2:
+            role_bindings2 = json.loads(open(args.role_bindings2, 'r').read())
 
-        return gcp2policy(roles, role_binding1, role_binding2)
+        return gcp2policy(roles, role_bindings1, role_bindings2)
 
     # Unsupported
     else:
@@ -104,7 +104,7 @@ def azure2policy_helper(role_definitions, role_assignment):
                 }
 
                 if len(rd['NotActions'] + rd['NotDataActions']) > 0:
-                    statement['NotAction'] = [a.lower() for a in rd['NotActions'] + rd['NotDataActions']]
+                    statement['NotAction']: [a.lower() for a in rd['NotActions'] + rd['NotDataActions']]
 
                 if ra['scope'].count('/') > 6:
                     statement['Resource'].append(ra['scope'].lower())
@@ -113,43 +113,42 @@ def azure2policy_helper(role_definitions, role_assignment):
                     statement['Condition'] = ra['properties']['condition']
 
                 statements.append(statement)
-    
-    print(statements)
+        
     return {'Version': 'azure', 'Statement': statements}
 
-def gcp2policy(roles, role_binding1, role_binding2 = None):
+def gcp2policy(roles, role_bindings1, role_bindings2 = None):
     """
     Join GCP roles and role bindings into policies
 
     Args:
         roles (dict): roles
-        role_binding1 (dict): role binding 1
-        role_binding2 (dict, optional): role binding 2. Defaults to None.
+        role_bindings1 (dict): role binding 1
+        role_bindings2 (dict, optional): role binding 2. Defaults to None.
 
     Returns:
         tuple: policies (policy1, policy2)
     """
 
-    # try:
-    if not role_binding2:
-        return (gcp2policy_helper(roles, role_binding1),
-                None)
-    else:
-        return (gcp2policy_helper(roles, role_binding1),
-                gcp2policy_helper(roles, role_binding2))
+    try:
+        if not role_bindings2:
+            return (gcp2policy_helper(role, role_bindings1),
+                    None)
+        else:
+            return (gcp2policy_helper(role, role_bindings1),
+                    gcp2policy_helper(role, role_bindings2))
     
-    # except:
+    except:
         print('Invalid GCP roles or role binding(s).')
         sys.exit(1)
 
-def gcp2policy_helper(roles, role_binding):
+def gcp2policy_helper(roles, role_bindings):
     """
     Join GCP roles and role binding into a policy.
     Visit both and join on role ID.
 
     Args:
         roles (dict): roles
-        role_binding (dict): role bindings
+        role_bindings (dict): role bindings
 
     Returns:
         dict: policy
@@ -157,7 +156,7 @@ def gcp2policy_helper(roles, role_binding):
 
     statements = []
 
-    for rb in role_binding['bindings']:
+    for rb in role_bindings['bindings']:
         for rd in roles:
             if rb['role'] == rd['name']:
                 

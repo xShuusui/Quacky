@@ -1,0 +1,12 @@
+[
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::production/teams/alpha/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::production/teams/bravo/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::production/teams/charlie/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::management/teams/delta/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::management/teams/echo/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::management/teams/foxtrot/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::backup/teams/golf/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::backup/teams/hotal/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::backup/teams/india/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::backup/teams/juliet/clients/summary.txt"}
+]

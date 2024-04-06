@@ -3,7 +3,6 @@
 from datetime import datetime
 from ipaddress import IPv4Address
 from ipaddress import IPv6Address
-from utils.Shell import Shell
 import itertools
 import json
 import re
@@ -121,7 +120,7 @@ def unix_time(obj):
     t = datetime.strptime(obj, '%Y-%m-%dT%H:%M:%SZ').timestamp()
     return str(round(t))
 
-def disjunction_to_ranges(obj, lang='aws'):
+def disjunction_to_ranges(obj):
     """
     Convert a disjunction constraint to a range constraint.
     Used in action encoding.
@@ -135,11 +134,6 @@ def disjunction_to_ranges(obj, lang='aws'):
     """
 
     obj = [int(n) for n in obj] # preprocess obj
-    
-    if lang == 'gcp':
-        D = 3
-    else:
-        D = 5
 
     ranges = list()
 
@@ -147,16 +141,16 @@ def disjunction_to_ranges(obj, lang='aws'):
     for a, b in itertools.groupby(enumerate(obj), lambda x : x[1] - x[0]):
         b = list(b)
         if b[0][1] == b[-1][1]:
-            ranges.append(str(b[0][1]).zfill(D))
+            ranges.append(str(b[0][1]).zfill(5))
         else:
-            ranges.append((str(b[0][1]).zfill(D), str(b[-1][1]).zfill(D)))
+            ranges.append((str(b[0][1]).zfill(5), str(b[-1][1]).zfill(5)))
 
     disjunction_ops = len(obj) + 1 # len "="s and 1 "or"
     ranges_ops = len(ranges) + 1 # len "and"s or "="s and 1 "or"
     ranges_ops += 2 * len([r for r in ranges if type(r) == tuple]) # len ">="s and "<="s
         
     if disjunction_ops < ranges_ops:
-        return [str(n).zfill(D) for n in obj]
+        return [str(n).zfill(5) for n in obj]
     else:
         return ranges
 
@@ -205,51 +199,4 @@ def get_abc_result_line(out, err):
             continue
 
     results["var"] = var_results
-    return results
-
-def get_variables(fname):
-    """
-    Infer variables from SMT formula.
-    Args:
-        fname (str): file name of SMT formula
-    Returns:
-        list: variables
-    """
-
-    formula = open(fname, 'r').read()
-    variables = []
-
-    for dtype in ['String', 'Int']:
-        pattern = 'declare-const ([A-Za-z0-9\.]+) {}'.format(dtype)
-        variables += re.findall(pattern, formula)
-
-    return variables
-
-def get_results(fname, bound, shell, timeout = None):
-    """
-    Run ABC and get results.
-    Args:
-        fname ([str): file name
-        bound (str): bound
-        timeout (int): timeout, in seconds
-    Returns:
-        dict: results
-    """
-
-    variables = get_variables(fname)
-
-    cmd = ''
-    
-    if timeout:
-        cmd += 'timeout -k {0}s {0}s '.format(timeout)
-    
-    cmd += 'abc -i {}'.format(fname)
-    cmd += ' -bs {0}'.format(bound)
-    cmd += ' --precise --count-tuple --count-variable {} -v 0'.format(','.join(variables))
-    
-    out, err = shell.runcmd(cmd)
-
-    # Parse ABC output
-    results = get_abc_result_line(out, err)
-
     return results

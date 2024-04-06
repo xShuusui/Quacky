@@ -1,0 +1,10 @@
+[
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/users/client1"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/users/client11"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/users/client0"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/users/client200"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/logs/client5"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/logs/client3"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/logs/client12"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::files.mydomain.com/logs/client4"}
+]

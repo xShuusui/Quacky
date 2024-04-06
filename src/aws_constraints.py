@@ -4,7 +4,51 @@ from utilities import disjunction_to_ranges
 import json
 import re
 
+# builds AWS resource type constraints with actions only
 def aws_type_constraints(namespaces, smt_lib = False, enc = False):
+    smt = ''
+
+    if '*' in namespaces:
+        namespaces = json.loads(open('offline/aws/namespaces.json', 'r').read())
+        namespaces = [namespace for namespace, is_valid in namespaces.items() if is_valid == True]
+
+    actions = json.loads(open('offline/aws/actions.json', 'r').read())
+
+    if enc:
+        encoding_json = json.loads(open('offline/aws/encoding.json', 'r').read())
+        lo = encoding_json['_lo']
+        hi = encoding_json['_hi']
+
+        if smt_lib:
+            smt_json = json.loads(open('offline/aws/constraints_enc_z3.json', 'r').read())
+            smt += '(assert (and (>= (str.to_int action) {}) (<= (str.to_int action) {})))\n'.format(int(lo), int(hi))
+            smt += '(assert (str.in.re action ((_ re.loop 5 5) (re.range "0" "9"))))\n'
+        else:
+            smt_json = json.loads(open('offline/aws/constraints_enc.json', 'r').read())
+            smt += '(assert (and (>= action "{}") (<= action "{}")))\n'.format(lo, hi)
+            smt += '(assert (in action /[0-9]{5,5}/))\n'
+
+        smt += '(assert (or'
+
+        for namespace in namespaces:
+            smt += aws_action_encoding(namespace + ':*', smt_lib)
+
+        smt += '))\n\n'
+    
+    # bypass the offline files (this is hacky)
+    else:
+        smt += '(assert (or'
+
+        for namespace in namespaces:
+            for resource_type in actions[namespace]:
+                for action in actions[namespace][resource_type]:
+                    smt += f' (= action "{namespace}:{action}")'
+
+        smt += '))\n\n'
+
+    return smt
+
+def FULL_aws_type_constraints(namespaces, smt_lib = False, enc = False):
     """
     Builds AWS resource type constraints
 
@@ -71,19 +115,29 @@ def aws_action_encoding(action, smt_lib):
     # Files with offline action encoding
     encoding_json = json.loads(open('offline/aws/encoding.json', 'r').read())
 
-    namespace = action.split(':')[0]
-    pattern = action.split(':')[1]
+    if ':' in action:
+        namespaces = [action.split(':')[0]]
+        pattern = action.split(':')[1]
+    else:
+        namespaces = json.loads(open('offline/aws/namespaces.json', 'r').read())
+        namespaces = [namespace for namespace, is_valid in namespaces.items() if is_valid == True]
+        pattern = '*'
 
     smt = ''
 
     if pattern == '*':
-        lo = encoding_json[namespace]['_lo']
-        hi = encoding_json[namespace]['_hi']
+        smt += ' (or'
+        
+        for namespace in namespaces:
+            lo = encoding_json[namespace]['_lo']
+            hi = encoding_json[namespace]['_hi']
 
-        if smt_lib:
-            smt += ' (and (>= (str.to_int action) {}) (<= (str.to_int action) {}))'.format(int(lo), int(hi))
-        else:
-            smt += ' (and (>= action "{}") (<= action "{}"))'.format(lo, hi)
+            if smt_lib:
+                smt += ' (and (>= (str.to_int action) {}) (<= (str.to_int action) {}))'.format(int(lo), int(hi))
+            else:
+                smt += ' (and (>= action "{}") (<= action "{}"))'.format(lo, hi)
+
+        smt += ')'
 
         return smt
 

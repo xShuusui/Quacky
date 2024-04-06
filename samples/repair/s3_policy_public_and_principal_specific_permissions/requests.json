@@ -1,0 +1,24 @@
+[
+    {
+        "Action": "s3:CreateBucket",
+        "Resource": "arn:aws:s3:::my-bucket"
+    },
+    {
+        "Action": "s3:DeleteBucket",
+        "Resource": "arn:aws:s3:::my-bucket"
+    },
+    {
+        "Action": "s3:ListBucket",
+        "Resource": "arn:aws:s3:::my-bucket"
+    },
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/production/user12345/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/production/user44012/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/production/user00000/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/production/user91232/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/production/user121212/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/management/admin2/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/management/admin12/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/management/admin0/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/management/admin4/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::my-bucket/management/admin3/status.log"}
+]

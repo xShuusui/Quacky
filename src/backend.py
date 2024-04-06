@@ -1,5 +1,6 @@
 # Functions for backend (i.e. translating policy model to SMT).
 
+import policy_model
 from policy_model import *
 from aws_constraints import *
 from azure_constraints import *
@@ -35,7 +36,7 @@ def visit_policy_model(obj, domain, from_domain, smt_lib, enc, cnstr):
         lang = obj['Version'] if 'Version' in obj else 'aws'
         body += Policy('p0', obj, smt_lib, enc).smt()
 
-    """
+    """ 
     # Add all SMT translations for the domain
     if 'Principal' in domain.keys():
         body += Principal('', domain['Principal'], False, smt_lib).smt()
@@ -76,6 +77,10 @@ def visit_policy_model(obj, domain, from_domain, smt_lib, enc, cnstr):
         elif lang == 'gcp':
             body += gcp_type_constraints(actions, smt_lib, enc)
 
-    smt = header + '\n' + ''.join(assertions) + '\n' + body + '\n'
-    
+    # hacked for policy repair
+    if smt_lib:
+        smt = header + '\n' + ''.join(assertions_smt_lib) + '\n' + body + '\n'
+    else:
+        smt = header + '\n' + ''.join(assertions) + '\n' + body + '\n'
+
     return smt

@@ -1,0 +1,21 @@
+[
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/stewart@domain.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/files.global@domain.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/admin@games4u.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/awesome_user@xyz.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/gandalf@lotr.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/voldemort@pottersux.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/chocolate@candy.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/my.email@anonymous.com"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::examplebucket/mail/twelve@numbers.com"},
+
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/stewart@domain.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/files.global@domain.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/admin@games4u.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/awesome_user@xyz.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/gandalf@lotr.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/voldemort@pottersux.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/chocolate@candy.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/my.email@anonymous.com"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::examplebucket/mail/twelve@numbers.com"}    
+]

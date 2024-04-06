@@ -1,0 +1,23 @@
+[
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/alpha/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/bravo/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/charlie/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/delta/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/echo/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/foxtrot/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/golf/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/hotal/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/india/clients/summary.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::example/teams/juliet/clients/summary.txt"},
+
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/alpha/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/bravo/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/charlie/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/delta/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/echo/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/foxtrot/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/golf/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/hotal/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/india/clients/summary.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::example/teams/juliet/clients/summary.txt"}
+]

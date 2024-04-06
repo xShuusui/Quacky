@@ -1,0 +1,4 @@
+arn:aws:s3:::mybucket/foo
+arn:aws:s3:::mybucket/bar
+arn:aws:s3:::mybucket/foo
+arn:aws:s3:::mybucket/bar

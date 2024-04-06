@@ -1,0 +1,27 @@
+[
+    {
+        "Action": "s3:ListBucket",
+        "Resource": "arn:aws:s3:::prod--testfiles"
+    },
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/01283/home/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/01283/home/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/03412/home/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/03412/home/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/38431/home/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/38431/home/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/00000/home/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/00000/home/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/99999/home/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::prod--testfiles/99999/home/status.txt"},
+
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/01283/home/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/01283/home/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/03412/home/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/03412/home/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/38431/home/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/38431/home/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/00000/home/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/00000/home/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/99999/home/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::prod--testfiles/99999/home/status.txt"}
+]

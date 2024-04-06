@@ -1,0 +1,18 @@
+[
+    {
+        "Action": "s3:GetBucketLocation",
+        "Resource": "arn:aws:s3:::examplebucket"
+    },
+    {
+        "Action": "s3:ListBucket",
+        "Resource": "arn:aws:s3:::examplebucket"
+    },
+    {
+        "Action": "s3:GetObject",
+        "Resource": "arn:aws:s3:::examplebucket/test"
+    },
+    {
+        "Action": "s3:PutObject",
+        "Resource": "arn:aws:s3:::examplebucket/test"
+    }
+]

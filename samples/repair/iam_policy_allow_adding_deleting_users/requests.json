@@ -1,0 +1,21 @@
+[
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/stewart@domain.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/files.global@domain.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/admin@games4u.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/awesome_user@xyz.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/gandalf@lotr.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/voldemort@pottersux.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/chocolate@candy.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/my.email@anonymous.com"},
+    {"Action": "iam:CreateUser","Resource": "arn:aws:iam::user/twelve@numbers.com"},
+    
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/stewart@domain.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/files.global@domain.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/admin@games4u.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/awesome_user@xyz.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/gandalf@lotr.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/voldemort@pottersux.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/chocolate@candy.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/my.email@anonymous.com"},
+    {"Action": "iam:DeleteUser","Resource": "arn:aws:iam::user/twelve@numbers.com"}
+    ]

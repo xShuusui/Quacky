@@ -1,0 +1,21 @@
+[
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/stewart@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/files.global@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/admin@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/awesome_user@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/gandalf@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/voldemort@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/chocolate@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/my.email@domain.com"},
+{"Action": "iam:CreateUser","Resource": "arn:aws:iam::012345678999:user/twelve@domain.com"},
+
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/stewart@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/files.global@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/admin@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/awesome_user@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/gandalf@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/voldemort@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/chocolate@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/my.email@domain.com"},
+{"Action": "iam:DeleteUser","Resource": "arn:aws:iam::123456589642:user/twelve@domain.com"}
+]

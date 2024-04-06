@@ -1,0 +1,14 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "foo",
+            "NotAction": "bar",
+            "NotResource": "baz",
+            "Condition": {
+                "StringEquals": {"key": "value"},
+                "StringNotEquals": {"key2": "value2"}
+            }
+        }
+    ]
+}

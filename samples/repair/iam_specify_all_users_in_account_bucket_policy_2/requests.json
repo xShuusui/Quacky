@@ -1,0 +1,24 @@
+[
+
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user12345/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user44012/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user00000/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user91232/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user121212/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin2/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin12/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin0/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin4/status.log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin3/status.log"},
+
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user12345/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user44012/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user00000/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user91232/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/production/user121212/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin2/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin12/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin0/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin4/status.log"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::myrandomnameforbucket/management/admin3/status.log"}
+]

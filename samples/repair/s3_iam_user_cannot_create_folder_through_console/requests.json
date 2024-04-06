@@ -1,0 +1,41 @@
+[
+    {
+        "Action": "s3:ListAllMyBuckets",
+        "Resource": "arn:aws:s3:::"
+    },
+    {
+        "Action": "s3:GetBucketLocation",
+        "Resource": "arn:aws:s3:::mybucket"
+    },
+    {
+        "Action": "s3:GetBucketLocation",
+        "Resource": "arn:aws:s3:::yourbucket"
+    },
+    {
+        "Action": "s3:ListBucket",
+        "Resource": "arn:aws:s3:::mybucket"
+    },
+
+
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/01283/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/01283/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/03412/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/03412/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/38431/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/38431/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/00000/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/00000/status.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/99999/config.txt"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::mybucket/home/99999/status.txt"},
+
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/01283/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/01283/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/03412/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/03412/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/38431/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/38431/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/00000/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/00000/status.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/99999/config.txt"},
+{"Action": "s3:PutObject","Resource": "arn:aws:s3:::mybucket/home/99999/status.txt"}
+]

@@ -1,0 +1,12 @@
+[
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-a/info"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-a/lib"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-b/etc"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-b/tmp"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-c/log"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-d/mailbox"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-e/schedule"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-x/doctrine"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-a0/foods"},
+{"Action": "s3:GetObject","Resource": "arn:aws:s3:::xxx/584-zzz/conclusion"}
+]
