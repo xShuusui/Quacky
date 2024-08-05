@@ -3,9 +3,40 @@ from tabulate import tabulate
 from translator import call_translator
 from utilities import *
 from utils.Shell import Shell
+from pathlib import Path
 
 import argparse as ap
 import math
+
+OUTPUT_FILE_NAME: str = "evaluated_output.json"
+
+def create_output(result, policy_name):
+    permissiveness = math.log(int(result['count']), 256)
+    entry = {
+        policy_name: {
+            "Satisfiability": result['is_sat'], 
+            "Permissiveness": permissiveness,
+        }
+    }
+
+    try:
+        with open(OUTPUT_FILE_NAME, 'r+') as file:
+            try:
+                data = json.load(file)
+                if not isinstance(data, list):
+                    data = []
+            except json.JSONDecodeError:
+                data = []
+            
+            data.append(entry)
+            
+            file.seek(0)
+            json.dump(data, file, indent=4)
+            file.truncate()
+
+    except FileNotFoundError:
+        with open(OUTPUT_FILE_NAME, 'w') as file:
+            json.dump([entry], file, indent=4)
 
 def call_abc(args):
     shell = Shell()
@@ -21,6 +52,8 @@ def call_abc(args):
         print(out, err)
 
     result1 = get_abc_result_line(out, err)
+
+    create_output(result1, Path(args.policy1).name)
 
     # Format results table
     table1 = [
@@ -59,6 +92,8 @@ def call_abc(args):
         print(out, err)
 
     result2 = get_abc_result_line(out, err)
+
+    create_output(result2, Path(args.policy2).name)
     
     # Format results table
     table2 = [
