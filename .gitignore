@@ -3,9 +3,11 @@
 **/*.pyc
 **/*.sh
 **/*.smt2
+**/*_reg.txt
 **/*.swp
 **/geckodriver*
 src/*.json
+tmp/
 
 **/__pycache__
 **/.vs
