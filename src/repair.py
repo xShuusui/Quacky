@@ -539,7 +539,7 @@ def get_new_policy(i, candidates, current_permissiveness, args):
         # new_permissiveness = get_policy_permissiveness(POLICY)
         
         # write new policy to file
-        f = open('repaired.json', 'w')
+        f = open(REPAIRED_FILENAME, 'w')
         f.write(json.dumps(POLICY, indent=4))
         f.close()
 
@@ -699,19 +699,24 @@ def repair(args):
     global GET_NEW_POLICY_TIME
     global GET_NEW_POLICY_ENUMERATED_TIME
 
+    global REPAIRED_FILENAME
+
     # start timer
     start_time = time.time()
 
     # get policy
-    out, err = shell.cp(args.policy1, 'repaired.json')
-    args.policy1 = 'repaired.json'
+    original_filename = args.policy1.rsplit('.json', 1)[0]
+    REPAIRED_FILENAME = f'{original_filename}.repaired.json'
+
+    out, err = shell.cp(args.policy1, REPAIRED_FILENAME)
+    args.policy1 = REPAIRED_FILENAME
 
     POLICY = json.loads(open(args.policy1, 'r').read())
     
     if 'Not' in json.dumps(POLICY):
         POLICY = transform_policy(POLICY)
 
-        print(f'transformed policy: {json.dumps(POLICY, indent=4)}\n')
+        #print(f'transformed policy: {json.dumps(POLICY, indent=4)}\n')
 
     POLICY = sanitize_and_wrap(POLICY)
     
@@ -786,7 +791,7 @@ def repair(args):
         # permissiveness = get_policy_permissiveness(POLICY, 'repaired.json')
         
         # write new policy to file
-        f = open('repaired.json', 'w')
+        f = open(REPAIRED_FILENAME, 'w')
         f.write(json.dumps(POLICY, indent=4))
         f.close()
 
@@ -863,7 +868,7 @@ def repair(args):
             #     enum_iters += 1
             
             # write new policy to file
-            f = open('repaired.json', 'w')
+            f = open(REPAIRED_FILENAME, 'w')
             f.write(json.dumps(POLICY, indent=4))
             f.close()
 

@@ -12,10 +12,13 @@ OUTPUT_FILE_NAME: str = "evaluated_output.json"
 
 def create_output(result, policy_name):
     permissiveness = math.log(int(result['count']), 256)
+    requests = math.log(int(result['count']), 2)
+
     entry = {
         policy_name: {
             "Satisfiability": result['is_sat'], 
             "Permissiveness": permissiveness,
+            "log(requests)": requests,
         }
     }
 
