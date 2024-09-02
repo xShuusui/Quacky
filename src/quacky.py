@@ -12,13 +12,33 @@ OUTPUT_FILE_NAME: str = "evaluated_output.json"
 
 def create_output(result, policy_name):
     permissiveness = math.log(int(result['count']), 256)
-    requests = math.log(int(result['count']), 2)
 
+    requests = int(result['count'])
+    requests_log = math.log(requests, 2)
+    requests_scientific = "{:.10e}".format(requests)
+
+    for k, v in result['var'].items():
+        if int(v['count']) > 0:
+            if k == 'action':
+                actions = int(v['count'])
+                action_log = math.log2(actions)
+                actions_scientific = "{:.10e}".format(actions)
+
+            if k == 'resource':
+                resources = int(v['count'])
+                resources_log = math.log2(actions)
+                resources_scientific = "{:.10e}".format(resources)
+    
     entry = {
         policy_name: {
             "Satisfiability": result['is_sat'], 
             "Permissiveness": permissiveness,
-            "log(requests)": requests,
+            "log(requests)": requests_log,
+            "requests": requests_scientific,
+            "log(actions)": action_log,
+            "actions": actions_scientific,
+            "log(resources)": resources_log,
+            "resources": resources_scientific,
         }
     }
 
